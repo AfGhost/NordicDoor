@@ -1,1 +1,3 @@
-# NordicDoor
+# NordicDoor prosjekt
+
+Gruppe 14
