@@ -1,0 +1,114 @@
+﻿@model NordicDoorWeb.Models.Forslag
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Forslag</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.ansatt_id)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.ansatt_id)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.tittel)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.tittel)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.nyttforslag)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.nyttforslag)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.årsak)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.årsak)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.mål)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.mål)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.løsning)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.løsning)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.dato_registrert)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.dato_registrert)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.frist)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.frist)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Bilde)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Bilde)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.navn_id)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.navn_id)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.ansvarlig)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.ansvarlig)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.tperiode_id)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.tperiode_id)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.kostnad_id)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.kostnad_id)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.teams_id)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.teams_id)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.gkjenning_id)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.gkjenning_id)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.status_id)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.status_id)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.forslag_id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

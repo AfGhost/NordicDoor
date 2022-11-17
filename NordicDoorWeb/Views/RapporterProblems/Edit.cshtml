@@ -1,0 +1,44 @@
+﻿@model NordicDoorWeb.Models.RapporterProblem
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>RapporterProblem</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="rproblem_id" />
+            <div class="form-group">
+                <label asp-for="ansatt_id" class="control-label"></label>
+                <input asp-for="ansatt_id" class="form-control" />
+                <span asp-validation-for="ansatt_id" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="problem_tittel" class="control-label"></label>
+                <input asp-for="problem_tittel" class="form-control" />
+                <span asp-validation-for="problem_tittel" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="problem_tekst" class="control-label"></label>
+                <input asp-for="problem_tekst" class="form-control" />
+                <span asp-validation-for="problem_tekst" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

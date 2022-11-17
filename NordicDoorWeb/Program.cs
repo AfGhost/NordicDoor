@@ -1,7 +1,15 @@
+using Microsoft.EntityFrameworkCore;
+using NordicDoorWeb.Controllers;
+using NordicDoorWeb.Models;
+using NordicDoorWeb.Data;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+builder.Services.AddDbContext<NordicDbContext>(options => options.UseSqlServer(
+builder.Configuration.GetConnectionString("MariaDb")
+            ));
 
 var app = builder.Build();
 

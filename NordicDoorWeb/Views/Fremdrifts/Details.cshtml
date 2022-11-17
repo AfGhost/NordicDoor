@@ -1,0 +1,60 @@
+﻿@model NordicDoorWeb.Models.Fremdrift
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Fremdrift</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.status_id)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.status_id)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.forslag_id)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.forslag_id)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.fremgang)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.fremgang)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.aktiv_ikke_aktiv)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.aktiv_ikke_aktiv)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.type_aktiv)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.type_aktiv)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.prosentvis_fullført)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.prosentvis_fullført)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.tildelt_team)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.tildelt_team)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.fremdrift_id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

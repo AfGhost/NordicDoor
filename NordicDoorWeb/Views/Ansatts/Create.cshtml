@@ -1,0 +1,63 @@
+﻿@model NordicDoorWeb.Models.Ansatt
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Ansatt</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="epost" class="control-label"></label>
+                <input asp-for="epost" class="form-control" />
+                <span asp-validation-for="epost" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="passord" class="control-label"></label>
+                <input asp-for="passord" class="form-control" />
+                <span asp-validation-for="passord" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ansatt_tilstand" class="control-label"></label>
+                <input asp-for="ansatt_tilstand" class="form-control" />
+                <span asp-validation-for="ansatt_tilstand" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="navn_id" class="control-label"></label>
+                <input asp-for="navn_id" class="form-control" />
+                <span asp-validation-for="navn_id" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="teams_id" class="control-label"></label>
+                <input asp-for="teams_id" class="form-control" />
+                <span asp-validation-for="teams_id" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="roller_id" class="control-label"></label>
+                <input asp-for="roller_id" class="form-control" />
+                <span asp-validation-for="roller_id" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="t_medlemmer_id" class="control-label"></label>
+                <input asp-for="t_medlemmer_id" class="form-control" />
+                <span asp-validation-for="t_medlemmer_id" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

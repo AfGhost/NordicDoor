@@ -1,0 +1,108 @@
+﻿@model NordicDoorWeb.Models.Forslag
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Forslag</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="ansatt_id" class="control-label"></label>
+                <input asp-for="ansatt_id" class="form-control" />
+                <span asp-validation-for="ansatt_id" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="tittel" class="control-label"></label>
+                <input asp-for="tittel" class="form-control" />
+                <span asp-validation-for="tittel" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="nyttforslag" class="control-label"></label>
+                <input asp-for="nyttforslag" class="form-control" />
+                <span asp-validation-for="nyttforslag" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="årsak" class="control-label"></label>
+                <input asp-for="årsak" class="form-control" />
+                <span asp-validation-for="årsak" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="mål" class="control-label"></label>
+                <input asp-for="mål" class="form-control" />
+                <span asp-validation-for="mål" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="løsning" class="control-label"></label>
+                <input asp-for="løsning" class="form-control" />
+                <span asp-validation-for="løsning" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="dato_registrert" class="control-label"></label>
+                <input asp-for="dato_registrert" class="form-control" />
+                <span asp-validation-for="dato_registrert" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="frist" class="control-label"></label>
+                <input asp-for="frist" class="form-control" />
+                <span asp-validation-for="frist" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Bilde" class="control-label"></label>
+                <input asp-for="Bilde" class="form-control" />
+                <span asp-validation-for="Bilde" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="navn_id" class="control-label"></label>
+                <input asp-for="navn_id" class="form-control" />
+                <span asp-validation-for="navn_id" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ansvarlig" class="control-label"></label>
+                <input asp-for="ansvarlig" class="form-control" />
+                <span asp-validation-for="ansvarlig" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="tperiode_id" class="control-label"></label>
+                <input asp-for="tperiode_id" class="form-control" />
+                <span asp-validation-for="tperiode_id" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="kostnad_id" class="control-label"></label>
+                <input asp-for="kostnad_id" class="form-control" />
+                <span asp-validation-for="kostnad_id" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="teams_id" class="control-label"></label>
+                <input asp-for="teams_id" class="form-control" />
+                <span asp-validation-for="teams_id" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="gkjenning_id" class="control-label"></label>
+                <input asp-for="gkjenning_id" class="form-control" />
+                <span asp-validation-for="gkjenning_id" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="status_id" class="control-label"></label>
+                <input asp-for="status_id" class="form-control" />
+                <span asp-validation-for="status_id" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

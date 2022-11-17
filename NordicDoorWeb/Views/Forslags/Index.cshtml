@@ -1,0 +1,125 @@
+﻿@model IEnumerable<NordicDoorWeb.Models.Forslag>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.ansatt_id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.tittel)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.nyttforslag)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.årsak)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.mål)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.løsning)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.dato_registrert)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.frist)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Bilde)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.navn_id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ansvarlig)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.tperiode_id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.kostnad_id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.teams_id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.gkjenning_id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.status_id)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.ansatt_id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.tittel)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.nyttforslag)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.årsak)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.mål)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.løsning)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.dato_registrert)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.frist)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Bilde)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.navn_id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ansvarlig)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.tperiode_id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.kostnad_id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.teams_id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.gkjenning_id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.status_id)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.forslag_id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.forslag_id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.forslag_id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

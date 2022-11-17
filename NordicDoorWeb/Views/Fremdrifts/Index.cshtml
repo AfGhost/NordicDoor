@@ -1,0 +1,71 @@
+﻿@model IEnumerable<NordicDoorWeb.Models.Fremdrift>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.status_id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.forslag_id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.fremgang)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.aktiv_ikke_aktiv)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.type_aktiv)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.prosentvis_fullført)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.tildelt_team)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.status_id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.forslag_id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.fremgang)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.aktiv_ikke_aktiv)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.type_aktiv)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.prosentvis_fullført)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.tildelt_team)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.fremdrift_id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.fremdrift_id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.fremdrift_id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

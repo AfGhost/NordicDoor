@@ -1,0 +1,49 @@
+﻿@model NordicDoorWeb.Models.Navn
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>Navn</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="navn_id" />
+            <div class="form-group">
+                <label asp-for="fornavn" class="control-label"></label>
+                <input asp-for="fornavn" class="form-control" />
+                <span asp-validation-for="fornavn" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="mellomnavn" class="control-label"></label>
+                <input asp-for="mellomnavn" class="form-control" />
+                <span asp-validation-for="mellomnavn" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="etternavn" class="control-label"></label>
+                <input asp-for="etternavn" class="form-control" />
+                <span asp-validation-for="etternavn" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="brukernavn" class="control-label"></label>
+                <input asp-for="brukernavn" class="form-control" />
+                <span asp-validation-for="brukernavn" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

@@ -1,0 +1,36 @@
+﻿@model NordicDoorWeb.Models.RapporterProblem
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>RapporterProblem</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.ansatt_id)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.ansatt_id)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.problem_tittel)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.problem_tittel)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.problem_tekst)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.problem_tekst)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.rproblem_id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

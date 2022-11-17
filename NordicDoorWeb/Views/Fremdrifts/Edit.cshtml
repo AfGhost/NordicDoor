@@ -1,0 +1,64 @@
+﻿@model NordicDoorWeb.Models.Fremdrift
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>Fremdrift</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="fremdrift_id" />
+            <div class="form-group">
+                <label asp-for="status_id" class="control-label"></label>
+                <input asp-for="status_id" class="form-control" />
+                <span asp-validation-for="status_id" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="forslag_id" class="control-label"></label>
+                <input asp-for="forslag_id" class="form-control" />
+                <span asp-validation-for="forslag_id" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="fremgang" class="control-label"></label>
+                <input asp-for="fremgang" class="form-control" />
+                <span asp-validation-for="fremgang" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="aktiv_ikke_aktiv" class="control-label"></label>
+                <input asp-for="aktiv_ikke_aktiv" class="form-control" />
+                <span asp-validation-for="aktiv_ikke_aktiv" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="type_aktiv" class="control-label"></label>
+                <input asp-for="type_aktiv" class="form-control" />
+                <span asp-validation-for="type_aktiv" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="prosentvis_fullført" class="control-label"></label>
+                <input asp-for="prosentvis_fullført" class="form-control" />
+                <span asp-validation-for="prosentvis_fullført" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="tildelt_team" class="control-label"></label>
+                <input asp-for="tildelt_team" class="form-control" />
+                <span asp-validation-for="tildelt_team" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

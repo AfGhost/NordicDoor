@@ -1,0 +1,30 @@
+﻿@model NordicDoorWeb.Models.Roller
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Roller</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.rolle)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.rolle)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.grad)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.grad)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.roller_id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
