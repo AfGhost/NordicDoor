@@ -1,6 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
 using NordicDoorWeb.Models;
+using System.Data.Entity.ModelConfiguration.Conventions;
 
 namespace NordicDoorWeb.Data
 {
@@ -25,11 +26,12 @@ namespace NordicDoorWeb.Data
         public DbSet<Tidsperiode> GetTidsperiode { get; set; }
 
 
-        /*
+       /*
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
         }
         */
+
     }
 }
